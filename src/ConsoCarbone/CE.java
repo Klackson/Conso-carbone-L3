@@ -8,5 +8,9 @@ public enum CE {
 	private CE(double alpha) {
 		this.alpha=alpha;
 	}
+
 	
+}
+public enum Taille {
+	P(4.2),G(19);
 }
