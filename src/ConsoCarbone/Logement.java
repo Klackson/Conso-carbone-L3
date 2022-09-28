@@ -1,9 +1,8 @@
 package ConsoCarbone;
 
-public class Logement {
+public class Logement extends ConsoCarbone{
 	int superficie;
 	CE ce;
-	double impact;
 	
 	private Logement() {
 		this(0,CE.A);
@@ -15,8 +14,14 @@ public class Logement {
 		this.impact=superficie*ce.alpha;
 	}
 	
-	public double getImpact() {
-		return this.impact;
+
+	
+	public void setsup(int sup) {
+		this.superficie=sup;
+	}
+	
+	public void setce(CE ce) {
+		this.ce=ce;
 	}
 	
 	public static void main(String[] args) {
