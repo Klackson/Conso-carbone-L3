@@ -18,6 +18,7 @@ public class Transport extends consoCarbone{
      this.taille=taille;
      this.kilomAnnee=kilomAnnee;
      this.amortissement=amortissement;
+     this.impact=possede*kilomAnnee*1.94*10**(-4)+fabrication/amortissement
      
       
        
