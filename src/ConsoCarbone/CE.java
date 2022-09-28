@@ -13,4 +13,8 @@ public enum CE {
 }
 public enum Taille {
 	P(4.2),G(19);
+	
+	public Taille(double fabrication){
+		this.fabrication=fabrication;
+	}
 }
