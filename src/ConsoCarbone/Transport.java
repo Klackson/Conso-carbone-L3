@@ -6,6 +6,15 @@ public class Transport extends consoCarbone{
   int kilomAnnee;
   int amortissement;
     
-    
+   public Transport(){
+     this.possede=false;
+     this.taille=P;
+     this.kilomAnnee=0;
+     this.amortsissement=0;
+     
+     
+      
+       
+       
 
 
