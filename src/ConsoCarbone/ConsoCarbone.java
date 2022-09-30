@@ -10,6 +10,7 @@ public class ConsoCarbone {
 	
 	public ConsoCarbone(double impact) {
 		this.impact=impact;
+		id++;
 	}
 	
 	public double getImpact() {
