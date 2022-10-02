@@ -5,13 +5,9 @@ public class ConsoCarbone {
 	protected double impact;
 	
 	public ConsoCarbone() {
-		this(0);
-	}
-	
-	public ConsoCarbone(double impact) {
-		this.impact=impact;
 		id++;
 	}
+
 	
 	public double getImpact() {
 		return this.impact;
