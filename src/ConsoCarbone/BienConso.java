@@ -15,4 +15,9 @@ public class BienConso extends ConsoCarbone{
 	public void setmontant(double montant) {
 		this.montant=montant;
 	}
+	
+   @Override
+   public String toString() {
+	   return "Votre émission de carbonne causée par vos dépenses est de "+this.impact;
+   }
 }

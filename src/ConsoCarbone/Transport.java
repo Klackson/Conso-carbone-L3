@@ -1,6 +1,6 @@
 package ConsoCarbone;
 
-public class Transport extends consoCarbone{
+public class Transport extends ConsoCarbone{
   boolean possede;
   Taille taille;
   int kilomAnnee;
@@ -15,7 +15,13 @@ public class Transport extends consoCarbone{
      this.taille=taille;
      this.kilomAnnee=kilomAnnee;
      this.amortissement=amortissement;
-     this.impact=possede*(Math.pow(kilomAnnee*1.94*10,-4)+(taille.fabrication/amortissement));
+     if(possede)this.impact=(kilomAnnee*1.94*Math.pow(10,-4)+(taille.fabrication/amortissement));
+     else this.impact=0;
+   }
+   
+   @Override
+   public String toString() {
+	   return "Votre émission de carbonne causée par votre voiture est de "+this.impact;
    }
    
 }

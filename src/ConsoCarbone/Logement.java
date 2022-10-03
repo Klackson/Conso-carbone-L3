@@ -29,4 +29,9 @@ public class Logement extends ConsoCarbone{
 	public void consoMoyenne() {
 		System.out.print("L'empreinte carbonne moyenne pour un logement est de : "+this.avg+" tonnes de CO2 par an.");
 	}
+	
+   @Override
+   public String toString() {
+	   return "Votre émission de carbonne causée par votre logement est de "+this.impact;
+   }
 }
