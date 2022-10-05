@@ -1,9 +1,9 @@
 package ConsoCarbone;
 
 public class Alimentation extends ConsoCarbone{
-	double txBoeuf;
-	double txVege;
-	int avg = (1144+408+538+263)/1000;
+	private double txBoeuf;
+	private double txVege;
+	private int avg = (1144+408+538+263)/1000;
 	
 	public static double xBoeuf=8;
 	public static double xVege = 0.9;
@@ -16,18 +16,34 @@ public class Alimentation extends ConsoCarbone{
 	public Alimentation(double txb, double txv) {
 		this.txBoeuf=txb;
 		this.txVege=txv;
-		this.impact=xBoeuf*txb + xVolaille*(1-txb-txv)+ xVege*txv;
+		this.calculImpact();
+		this.setName("alimentation");
 	}
 	
-	public void setvg(double vg) {
+	public void seTxVege(double vg) {
 		this.txVege=vg;
+		this.calculImpact();
 	}
 	
-	public void setbf(double bg) {
+	public void setTxBoeuf(double bg) {
 		this.txBoeuf=bg;
+		this.calculImpact();
+	}
+	
+	public double getTxVege() {
+		return txVege;
+	}
+	
+	public double getTxBoeuf() {
+		return txBoeuf;
 	}
 	
 	public void consoMoyenne() {
 		System.out.print("L'empreinte carbonne moyenne pour l'alimentation est de : "+this.avg+" tonnes de CO2 par an.");
 	}
+	
+   
+   public void calculImpact() {
+	   this.setImpact(xBoeuf*txBoeuf + xVolaille*(1-txBoeuf-txVege)+ xVege*txVege);
+   }
 }

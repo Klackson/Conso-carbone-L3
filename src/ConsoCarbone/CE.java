@@ -9,7 +9,7 @@ public enum CE {
 		this.alpha=alpha;
 	}
 	
-	public double getalpha() {
+	public double getAlpha() {
 		return this.alpha;
 	}
 	
