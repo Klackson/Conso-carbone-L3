@@ -8,5 +8,11 @@ public class exemple {
 		
 		Transport voituredemelvin = new Transport(true, Taille.G, 200, 10);
 		System.out.println(voituredemelvin);
+		
+		Alimentation repasmelvin = new Alimentation(0,1);
+		System.out.println(repasmelvin);
+		
+		System.out.println(voituredemelvin.getId());
+		System.out.println(rg60.getId());
 	}
 }

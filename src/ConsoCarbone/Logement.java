@@ -12,20 +12,20 @@ public class Logement extends ConsoCarbone{
 	protected Logement(int superficie, CE ce) {
 		this.superficie=superficie;
 		this.ce=ce;
-		this.calculImpact();
-		this.setName("logement");
+		calculImpact();
+		setName("logement");
 	}
 	
 
 	public void setSuperficie(int sup) {
 		this.superficie=sup;
-		this.calculImpact();
+		calculImpact();
 	}
 	
 	public void setCE(CE ce) {
 		if(!(ce instanceof CE))return;
 		this.ce=ce;
-		this.calculImpact();
+		calculImpact();
 	}
 	
 	public CE getCE() {
@@ -40,7 +40,6 @@ public class Logement extends ConsoCarbone{
 		System.out.print("L'empreinte carbonne moyenne pour un logement est de : "+this.avg+" tonnes de CO2 par an.");
 	}
 	
-   
    public void calculImpact() {
 	   this.setImpact(superficie*ce.getAlpha());
    }

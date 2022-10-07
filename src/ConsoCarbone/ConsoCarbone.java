@@ -1,12 +1,13 @@
 package ConsoCarbone;
 
-public class ConsoCarbone {
-	private static int id = 0;
+public abstract class ConsoCarbone implements Comparable<ConsoCarbone>{
+	private static int nbconso = 1;
+	private int id;
 	private double impact;
 	private String name="";
 	
 	public ConsoCarbone() {
-		id=id++;
+		this.id=nbconso++;
 	}
 
 	
@@ -24,10 +25,26 @@ public class ConsoCarbone {
 	
 	@Override
 	public String toString() {
-		return "L'émission de carbonne causée par votre "+this.name+" est de "+this.getImpact()+" tonnes par an.";
+		String end;
+		if(getImpact()<=1) end = " tonne de CO2 par an.";
+		else end= " tonnes de CO2 par an.";
+		return "L'émission de carbonne causée par votre "+this.name+" est de "+ Math.round(getImpact()*100.0)/100.0 +end;
 	}
 	
 	public void setName(String name) {
 		this.name=name;
+	}
+	
+	public abstract void calculImpact();
+	
+	public int getId() {
+		return id;
+	}
+	
+	@Override
+	public int compareTo(ConsoCarbone o) {
+		if(impact>o.getImpact()) return 1;
+		if(impact<o.getImpact()) return -1;
+		else return 0;
 	}
 }

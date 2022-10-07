@@ -5,9 +5,9 @@ public class Alimentation extends ConsoCarbone{
 	private double txVege;
 	private int avg = (1144+408+538+263)/1000;
 	
-	public static double xBoeuf=8;
-	public static double xVege = 0.9;
-	public static double xVolaille = 1.6;
+	private static double xBoeuf=8;
+	private static double xVege = 0.9;
+	private static double xVolaille = 1.6;
 
 	public Alimentation(){
 		this(0,0);

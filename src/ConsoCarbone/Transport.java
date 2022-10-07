@@ -1,10 +1,12 @@
 package ConsoCarbone;
 
 public class Transport extends ConsoCarbone{
-  boolean possede;
-  Taille taille;
-  private int kilomAnnee;
-  private int amortissement;
+	private boolean possede;
+	private Taille taille;
+	private int kilomAnnee;
+	private int amortissement;
+	
+	private static int avg= 1972;
     
    public Transport(){
 	 this(false,Taille.P,0,0);
@@ -58,6 +60,9 @@ public class Transport extends ConsoCarbone{
 	   return this.possede;
    }
    
+	public void consoMoyenne() {
+		System.out.print("L'empreinte carbonne moyenne pour la voiture est de : "+avg+" tonnes de CO2 par an.");
+	}
 }
   
      
