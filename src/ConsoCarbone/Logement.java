@@ -5,11 +5,11 @@ public class Logement extends ConsoCarbone{
 	private CE ce;
 	private int avg = (1696+675+355)/1000;
 	
-	protected Logement() {
+	public Logement() {
 		this(0,CE.A);
 	}
 	
-	protected Logement(int superficie, CE ce) {
+	public Logement(int superficie, CE ce) {
 		this.superficie=superficie;
 		this.ce=ce;
 		calculImpact();
