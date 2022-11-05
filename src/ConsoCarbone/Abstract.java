@@ -1,5 +1,5 @@
-abstract public class impact{
-  abstract public impact()
+abstract public class calculImpact{
+  abstract public calculImpact()
   }
   
 
