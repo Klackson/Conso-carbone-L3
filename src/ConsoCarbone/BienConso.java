@@ -2,7 +2,8 @@ package ConsoCarbone;
 
 public class BienConso extends ConsoCarbone{
 	private double montant;
-	private int avg = 1180+682+763;
+	private static final float avgklg = 1180+682+763;
+	private static final float avg=avgklg/1000;
 	
 	public BienConso() {
 		this(0);
@@ -11,11 +12,10 @@ public class BienConso extends ConsoCarbone{
 	public BienConso(double montant) {
 		this.montant=montant;
 		this.calculImpact();
-		this.setName("consommation");
 	}
 	
-	public void consoMoyenne() {
-		System.out.print("L'empreinte carbonne moyenne pour les dépenses est de : "+this.avg+" tonnes de CO2 par an.");
+	public static void consoMoyenne() {
+		System.out.print("L'empreinte carbonne moyenne pour les dépenses est de "+avg+" tonnes de CO2 par an.\n");
 	}
 
    
@@ -32,5 +32,8 @@ public class BienConso extends ConsoCarbone{
 		return this.montant;
 	}
 	
-
+	@Override
+	public String toString() {
+		return ("L'émission de carbonne causée par vos dépenses est de "+getImpact()+" tonnes par an.");
+	}
 }

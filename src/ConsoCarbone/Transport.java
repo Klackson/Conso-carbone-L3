@@ -19,7 +19,6 @@ public class Transport extends ConsoCarbone{
      this.kilomAnnee=kilomAnnee;
      this.amortissement=amortissement;
      calculImpact();
-     this.setName("voiture");
    }
 
    
@@ -65,7 +64,12 @@ public class Transport extends ConsoCarbone{
    }
    
 	public static void consoMoyenne() {
-		System.out.print("L'empreinte carbonne moyenne pour la voiture est de "+avg+" tonnes de CO2 par an.");
+		System.out.print("L'empreinte carbonne moyenne pour la voiture est de "+avg+" tonnes de CO2 par an.\n");
+	}
+	
+	@Override
+	public String toString() {
+		return ("L'émission de carbonne causée par votre voiture est de "+getImpact()+" tonnes par an.");
 	}
 }
   

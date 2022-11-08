@@ -4,7 +4,6 @@ public abstract class ConsoCarbone implements Comparable<ConsoCarbone>{
 	private static int nbconso = 1;
 	private int id;
 	private double impact;
-	private String name;
 	
 	public ConsoCarbone() {
 		this.id=nbconso++;
@@ -18,20 +17,8 @@ public abstract class ConsoCarbone implements Comparable<ConsoCarbone>{
 	public void setImpact(double imp) {
 		this.impact=imp;
 	}
+	
 
-	
-	@Override
-	public String toString() {
-		String end;
-		if(getImpact()<=1) end = " tonne de CO2 par an.";
-		else end = " tonnes de CO2 par an.";
-		return "L'émission de carbonne causée par votre "+this.name+" est de "+ Math.round(getImpact()*100.0)/100.0 +end;
-	}
-	
-	public void setName(String name) {
-		this.name=name;
-	}
-	
 	public abstract void calculImpact();
 	
 	public int getId() {

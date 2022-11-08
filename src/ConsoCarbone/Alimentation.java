@@ -18,7 +18,6 @@ public class Alimentation extends ConsoCarbone{
 		this.txBoeuf=txb;
 		this.txVege=txv;
 		this.calculImpact();
-		this.setName("alimentation");
 	}
 	
 	public void seTxVege(double vg) {
@@ -40,11 +39,16 @@ public class Alimentation extends ConsoCarbone{
 	}
 	
 	public static void consoMoyenne() {
-		System.out.print("L'empreinte carbonne moyenne pour l'alimentation est de "+avg+" tonnes de CO2 par an.");
+		System.out.print("L'empreinte carbonne moyenne pour l'alimentation est de "+avg+" tonnes de CO2 par an.\n");
 	}
 	
    
    public void calculImpact() {
 	   this.setImpact(xBoeuf*txBoeuf + xVolaille*(1-txBoeuf-txVege)+ xVege*txVege);
    }
+   
+	@Override
+	public String toString() {
+		return ("L'émission de carbonne causée par votre alimentation est de "+getImpact()+" tonnes par an.");
+	}
 }
