@@ -3,7 +3,8 @@ package ConsoCarbone;
 public class Logement extends ConsoCarbone{
 	private int superficie;
 	private CE ce;
-	private int avg = (1696+675+355)/1000;
+	private static final double avgklg = 1696 + 675 + 355;
+	private static final double avg= avgklg/1000;
 	
 	public Logement() {
 		this(0,CE.A);
@@ -23,7 +24,6 @@ public class Logement extends ConsoCarbone{
 	}
 	
 	public void setCE(CE ce) {
-		if(!(ce instanceof CE))return;
 		this.ce=ce;
 		calculImpact();
 	}
@@ -36,8 +36,8 @@ public class Logement extends ConsoCarbone{
 		return superficie;
 	}
 	
-	public void consoMoyenne() {
-		System.out.print("L'empreinte carbonne moyenne pour un logement est de : "+this.avg+" tonnes de CO2 par an.");
+	public static void consoMoyenne() {
+		System.out.print("L'empreinte carbonne moyenne pour un logement est de "+avg+" tonnes de CO2 par an.");
 	}
 	
    public void calculImpact() {

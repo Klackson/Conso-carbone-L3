@@ -14,5 +14,7 @@ public class exemple {
 		
 		System.out.println(voituredemelvin.getId());
 		System.out.println(rg60.getId());
+		
+		Transport.consoMoyenne();
 	}
 }
