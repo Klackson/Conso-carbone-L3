@@ -1,14 +1,11 @@
 package ConsoCarbone;
 
 public class Alimentation extends ConsoCarbone{
-	private double txBoeuf;
-	private double txVege;
+	private double txBoeuf, txVege;
 	private final static double avgklg = 1144+408+538+263;
 	private final static double avg= avgklg/1000;
 	
-	private final static double xBoeuf= 8;
-	private final static double xVege = 0.9;
-	private final static double xVolaille = 1.6;
+	private final static double poidsBoeuf= 8,  poidsVege = 0.9, poidsVolaille = 1.6;
 
 	public Alimentation(){
 		this(0,0);
@@ -45,6 +42,6 @@ public class Alimentation extends ConsoCarbone{
 	
    
    public void calculImpact() {
-	   this.setImpact(xBoeuf*txBoeuf + xVolaille*(1-txBoeuf-txVege)+ xVege*txVege);
+	   this.setImpact(poidsBoeuf*txBoeuf + poidsVolaille*(1-txBoeuf-txVege)+ poidsVege*txVege);
    }
 }

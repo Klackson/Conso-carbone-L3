@@ -6,7 +6,7 @@ public class exemple {
 		Logement rg60 = new Logement(65,CE.E);
 		System.out.println(rg60);
 		
-		Transport voituredemelvin = new Transport(true, Taille.G, 200, 10);
+		Transport voituredemelvin = new Transport(true, Taille.G, 200, 10, 4.5);
 		System.out.println(voituredemelvin);
 		
 		Alimentation repasmelvin = new Alimentation(0,1);
