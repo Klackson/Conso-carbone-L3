@@ -5,21 +5,23 @@ public class Transport extends ConsoCarbone{
 	private Taille taille;
 	private int kilomAnnee, amortissement;
 	private double heuresavion;
+	private double heurestrain;
 	
 	private static final double avgklg = 1972;
 	private static final double avg = avgklg/1000;
 	private static final double CO2heureavion = 0.19;
-    
+    	private static final double CO2htrain = 0.000452;
    public Transport(){
 	 this(false,Taille.P,0,0,0);
    }
      
-   public Transport(boolean possede, Taille taille, int kilomAnnee,int amortissement, double heuresavion){
+   public Transport(boolean possede, Taille taille, int kilomAnnee,int amortissement, double heuresavion, double heurestrain){
      this.possede=possede;
      this.taille=taille;
      this.kilomAnnee=kilomAnnee;
      this.amortissement=amortissement;
      this.heuresavion=heuresavion;
+     this.heurestrain=heurestrain;
      calculImpact();
      this.setName("utilisation des transports");
    }
@@ -28,7 +30,7 @@ public class Transport extends ConsoCarbone{
    public void calculImpact() {
 	   if(possede) this.setImpact( kilomAnnee*1.94*Math.pow(10,-4)+(taille.getFabrication()/amortissement) );
 	   else this.setImpact(0);
-	   setImpact(getImpact()+heuresavion*CO2heureavion);
+	   setImpact(getImpact()+heuresavion*CO2heureavion+heurestrain*CO2htrain);
    }
    
    public void setKilomAnnee(int klm) {
@@ -70,6 +72,10 @@ public class Transport extends ConsoCarbone{
 	public static void consoMoyenne() {
 		System.out.print("L'empreinte carbonne moyenne pour la voiture est de "+avg+" tonnes de CO2 par an.");
 	}
+	
+	public void économie(){}
+	
+		
 }
   
      
