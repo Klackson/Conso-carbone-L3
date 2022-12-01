@@ -73,7 +73,6 @@ public class Transport extends ConsoCarbone{
 		System.out.print("L'empreinte carbonne moyenne pour la voiture est de "+avg+" tonnes de CO2 par an.");
 	}
 	
-	public void économie(){}
 	
 		
 }
