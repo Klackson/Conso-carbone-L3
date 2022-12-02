@@ -12,7 +12,7 @@ public class Transport extends ConsoCarbone{
 	private static final double CO2heureavion = 0.19;
     	private static final double CO2htrain = 0.000452;
    public Transport(){
-	 this(false,Taille.P,0,0,0);
+	 this(false,Taille.P,0,0,0,0);
    }
      
    public Transport(boolean possede, Taille taille, int kilomAnnee,int amortissement, double heuresavion, double heurestrain){
