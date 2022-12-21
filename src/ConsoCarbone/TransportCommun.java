@@ -20,6 +20,8 @@ public class TransportCommun extends ConsoCarbone {
   private static final double vitesseTram=25;
   private static final double CO2KmRER=6.2/1000000;
   private static final double vitesseRER=70;
+  private static final double MoyenmeRERtramsem=29.7/1000000
+  private static final double MoyenBussem=268/1000000
 
 
 
